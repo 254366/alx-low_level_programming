@@ -1,35 +1,35 @@
 #include <stdio.h>
 
 /**
-* main - prints all possible combination of two two two-digits numbers
+* main - prints all possible combinations of two two-digit numbers
 * Return: Always 0 (success)
 */
-int  main(void)
+int main(void)
 {
-int i, j;
 
-for (i = 0; i < 100; i++)
+int firstDigit = 0, secondDigit;
+
+while (firstDigit <= 99)
 {
-for (j = 0; j < 100; j++)
-if (i < j)
+secondDigit = firstDigit;
+while (secondDigit <= 99)
 {
-putchar((i / 10) + 48);
-putchar((i % 10) + 48);
+if (secondDigit != firstDigit)
+{
+putchar((firstDigit / 10) + '0');
+putchar((firstDigit % 10) + '0');
 putchar(' ');
-putchar((j / 10) + 48);
-putchar((j % 10) + 48);
-if (i != 98 || j != 99)
+putchar((secondDigit / 10) + '0');
+putchar((secondDigit % 10) + '0');
+if (firstDigit != 98 || secondDigit != 99)
 {
 putchar(' ');
 putchar(' ');
-{
-
 }
-
 }
-
+secondDigit++;
 }
-
+firstDigit++;
 }
 putchar('\n');
 return (0);
