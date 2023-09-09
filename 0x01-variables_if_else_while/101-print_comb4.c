@@ -3,41 +3,40 @@
 /**
 * main - Entry point
 *
-* Description: print all possible different combinations of two digits
+* Description: print all possible different combinations of three digits
 *
 * Return: Always 0 (success)
 */
 int main(void)
+
 {
-int digit1 = 0;
-int digit2, digit3;
-while (digit1 <= 9)
+int x, y, z;
 {
-digit2 = 0;
-while (digit2 <= 9)
+for (x = 48; x < 58; x++)
 {
-digit3 = 0;
-while (digit3 <= 9)
+for (y = 49; y < 58; y++)
 {
-if (digit1 != digit2 &&
-digit1 != digit3 &&
-digit2 != digit3)
+for (z = 50; z < 58; z++)
 {
-putchar(digit1 + '0');
-putchar(digit2 + '0');
-putchar(digit3 + '0');
-if (digit1 + digit2 + digit3 != 24)
+if (z > y && y > x)
+{
+putchar(x);
+putchar(y);
+putchar(z);
+if (x != 55 || y != 56)
 {
 putchar(',');
 putchar(' ');
 }
+{
 }
-digit3++;
+
 }
-digit2++;
+
 }
-digit1++;
+
 }
 putchar('\n');
 return (0);
 }
+
