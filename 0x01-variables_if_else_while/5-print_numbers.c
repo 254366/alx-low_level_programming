@@ -6,11 +6,9 @@
 */
 int main(void)
 {
-int digit = 0;
-while (digit <= 9)
-{
-printf("%d\n", digit);
-digit++;
-}
+int x;
+for (x = 0; x < 10 ; x++)
+printf("%d", x);
+printf("\n");
 return (0);
 }
