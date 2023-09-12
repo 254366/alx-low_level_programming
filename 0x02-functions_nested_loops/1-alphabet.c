@@ -5,7 +5,6 @@
 * Return:return 0 (success)
 */
 void print_alphabet(void)
- 
 {
 
 char x;
