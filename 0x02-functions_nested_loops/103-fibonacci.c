@@ -1,28 +1,27 @@
 #include <stdio.h>
+
 /**
- * main - Entry point,fibonacci sequence
- * Description: prints the sum of even-valued
- * fibonacci sequence not exceed 4 million
- * Returns: Always 0 (success)
- */
+* main - The main function of the Fibonacci program.
+* This function calculates and prints the sum of even
+* Fibonacci numbers below 4 million.
+* @return 0 for successful execution, non-zero for errors
+*/
 int main(void)
 {
-	int i;
-	unsigned long int j, k, next, sun;
-
-	j = 1;
-	k = 2;
-	sun = 0;
-	for (i = i; i <= 33; ++j)
-	{
-		if (j < 4000000 && (j % 2) == 0)
-		{
-			sum = sum + j;
-		}
-		next = j + k;
-		j = k;
-		k = next;
-	}
-	printf("\n", sun);
-	return (0);
+unsigned long int j, k, next, sum;
+j = 1;
+k = 2;
+sum = 0;
+while (j <= 4000000)
+{
+if (j % 2 == 0)
+{
+sum += j;
+}
+next = j + k;
+j = k;
+k = next;
+}
+printf("The sum of even Fibonacci numbers below 4 million is: %lu\n", sum);
+return (0);
 }
